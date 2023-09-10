@@ -1,7 +1,7 @@
 import Nav from '../components/Nav'
 import { observer } from 'mobx-react-lite';
 
-function Screensaver() {
+function Home() {
 
 
     return (
@@ -12,4 +12,4 @@ function Screensaver() {
         </>
     )
 }
-export default observer(Screensaver);
+export default observer(Home);

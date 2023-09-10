@@ -1,15 +1,16 @@
 import Nav from '../components/Nav'
 import { observer } from 'mobx-react-lite';
 
-function Screensaver() {
+function Extras() {
 
 
     return (
         <>
             <Nav />
             <main>
+            <h1>Extras</h1>
             </main>
         </>
     )
 }
-export default observer(Screensaver);
+export default observer(Extras);
