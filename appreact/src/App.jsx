@@ -1,6 +1,3 @@
-import './App.css';
-import 'tailwindcss/tailwind.css';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { store } from './store/store'
 import { createContext } from 'react';
