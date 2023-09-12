@@ -1,5 +1,6 @@
 import Nav from '../components/Nav'
 import { observer } from 'mobx-react-lite';
+import Popup from '../components/Popup';
 
 function Home() {
 
@@ -8,6 +9,7 @@ function Home() {
         <>
             <Nav />
             <main>
+            <Popup  />
             </main>
         </>
     )

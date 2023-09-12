@@ -2,11 +2,11 @@ import React from 'react';
 
 function QuantityButton({type}) {
 
-    const selectedButton = type="Plus" ? "Icone +" : type="Minus" ? "Icone -" : "";
+    const selectedButton = type && type==="plus" ? "Icone +" : type && type==="minus" ? "Icone -" : "";
 
     return (
 
-        <button>{selectedButton}</button>
+        <button className='bg-zinc-500'>{selectedButton}</button>
 
     )
 }
