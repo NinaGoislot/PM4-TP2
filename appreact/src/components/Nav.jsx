@@ -6,14 +6,17 @@ function Nav() {
 
 
     return (
-        <nav>
-            <ul>
-                <NavItem name="Accueil" link="/home" />
-                <NavItem name="Expositions" link="/expositions" />
-                <NavItem name="Extras" link="/extras" />
+        <nav className='bg-stone-500'>
+            <img className='w-52' src="../../icons8-logo-480.svg" alt="" />
+            <ul className='absolute top-5 right-8 h-16 w-60 space-y-4'>
+                <NavItem name="ACCUEIL" link="/home" />
+                <NavItem name="EXPOSITIONS" link="/expositions" />
+                <NavItem name="EXTRAS" link="/extras" />
             </ul>
         </nav>
     );
 }
+
+
 
 export default Nav;

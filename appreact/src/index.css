@@ -7,8 +7,27 @@
 
 @layer components {
   :root {
-    --primary-color: #ff9d00;
-    --secondary-color: #ff0000;
+    --primary-background-color: #333333;
+    --secondary-background-color: #ececec;
+
+    --primary-text-color: #ececec;
+    --secondary-text-color: #333333;
+  }
+
+  .primary-background-color{
+    background-color:var(--primary-background-color);
+  }
+
+  .secondary-background-color{
+    background-color:var(--secondary-background-color);
+  }
+
+  .primary-text-color{
+    color:var(--primary-text-color);
+  }
+
+  .secondary-text-color{
+    color:var(--secondary-text-color);
   }
   
 }
