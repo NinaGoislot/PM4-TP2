@@ -21,10 +21,11 @@ function Expositions() {
             <Nav />
             <main>
                 <h1>Expositions</h1>
-                <div className="bg-blue-500 text-white p-4">Ceci est un exemple Tailwind</div>
-                {filteredArticles.map(article => (
-                    <Article key={article.id} article={article} />
-                ))}
+                <div className='flex flex-wrap justify-center'>
+                    {filteredArticles.map(article => (
+                        <Article key={article.id} article={article} />
+                    ))}
+                </div>
 
             </main>
         </>

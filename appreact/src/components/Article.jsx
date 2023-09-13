@@ -1,34 +1,26 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from '../App.jsx';
+import QuantityButton from "./QuantityButton";
 
 
 function Article({ article }) {
 
     const { articleStore } = useContext(GlobalContext);
-    const [quantity, setQuantity] = useState(0);
+
 
     return (
-        <article>
-            <div>
-                
+        <article className="flex justify-between w-2/5 border-dashed m-4 border-2 border-sky-500 items-center">
+            <div className="flex flex-col">
+                <p>{article.name}</p>
+                <p>{article.picture[0]}</p>
+                <p>{article.price}$</p>
+                <img src="../../public/icons8-logo-480.svg" className="w-40 h-40" alt="" />
+                <img src={`../pictures/${article.picture[0]}`} className="w-40 h-40" alt="" />
             </div>
-            Test
-            <p>{article.name}</p>
-            <p>{article.picture}</p>
-            <img src="../../public/logo512.png" alt="" />
-            <li>
-                Quantité actuelle : {quantity && quantity > 0 ? quantity : 0}
-                <button className="bg-sky-300" onClick={() => setQuantity(quantity + 1)}>
-                    Ajouter
-                </button>
-                <button className="bg-red-300" onClick={() => setQuantity(quantity + -1)}>
-                    Retirer
-                </button>
-            </li>
 
-            {article && article.pictures && article.pictures[0] && (
-                    <img src={`../pictures/${article.pictures[0]}`} alt={article.alt} />
-                )}
+            <QuantityButton row={false} />
+
+
         </article>
 
 

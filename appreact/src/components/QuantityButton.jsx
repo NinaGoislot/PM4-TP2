@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useContext } from "react";
+import Button from "./Button";
 
-function QuantityButton({type}) {
+function QuantityButton({ row = true }) {
 
-    const selectedButton = type && type==="plus" ? "Icone +" : type && type==="minus" ? "Icone -" : "";
+    const [quantity, setQuantity] = useState(0);
+
+    const direction = row ? "row" : "col";
+
+    const addOneArticle = () => {
+        setQuantity(quantity + 1);
+    };
+
+    const removeOneArticle = () => {
+        setQuantity(quantity - 1);
+    };
 
     return (
 
-        <button className='bg-zinc-500'>{selectedButton}</button>
+        <div className={`flex flex-${direction} justify-between items-center`}>
+            <Button title="Ajouter" icon="faPlus" onClick={addOneArticle} />
+            {quantity && quantity > 0 ? quantity : 0}
+            <Button title="Retirer" icon="faMinus" onClick={removeOneArticle} />
+        </div>
 
     )
 }

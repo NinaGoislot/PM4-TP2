@@ -4,7 +4,7 @@
         "name": "MLab",
         "description": "Description de l'article 1.",
         "price": 19,
-        "pictures": [
+        "picture": [
             "mlab-numerisation-3d.jpeg",
             "mlab-prototype-re-ak.jpeg",
             "mlab-test-employes.jpeg"
