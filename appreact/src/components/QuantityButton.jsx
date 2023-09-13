@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState} from "react";
 import Button from "./Button";
 
 function QuantityButton({ row = true }) {
@@ -18,9 +18,9 @@ function QuantityButton({ row = true }) {
     return (
 
         <div className={`flex flex-${direction} justify-between items-center`}>
-            <Button title="Ajouter" icon="faPlus" onClick={addOneArticle} />
+            {row === false ? <Button title="Ajouter" icon="faPlus" onClick={addOneArticle} /> : <Button title="Retirer" icon="faMinus" onClick={removeOneArticle} />}
             {quantity && quantity > 0 ? quantity : 0}
-            <Button title="Retirer" icon="faMinus" onClick={removeOneArticle} />
+            {row === false ? <Button title="Retirer" icon="faMinus" onClick={removeOneArticle} /> : <Button title="Ajouter" icon="faPlus" onClick={addOneArticle} />}
         </div>
 
     )
