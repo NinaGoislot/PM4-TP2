@@ -1,0 +1,153 @@
+[
+    {
+        "id": "EXPO01",
+        "name": "MLab",
+        "description": "Description de l'article 1.",
+        "price": 19,
+        "pictures": [
+            "mlab-numerisation-3d.jpeg",
+            "mlab-prototype-re-ak.jpeg",
+            "mlab-test-employes.jpeg"
+        ],
+        "quantity": 0,
+        "alt": "Photographies de l'exposition"
+    },
+    {
+        "id": "EXPO02",
+        "name": "Unique en son genre",
+        "description": "Description de l'article 2.",
+        "price": 20,
+        "picture": [
+            "unique-genre-allee-portraits.jpeg",
+            "unique-genre-enseignes-bar.jpeg",
+            "unique-genre-papillons.jpeg",
+            "unique-genre-portraits-historiques.jpeg",
+            "unique-genre-veste-queer-power.jpeg"
+        ],
+        "quantity": 0,
+        "alt": "Photographies de l'exposition"
+    },
+    {
+        "id": "EXPO03",
+        "name": "Ma maison",
+        "description": "Description de l'article 3.",
+        "price": 15,
+        "picture": [
+            "ma-maison-course-fille-jardin.jpeg",
+            "ma-maison-ecouter-observer-1.jpeg",
+            "ma-maison-enfants-salle-bain-1.jpeg",
+            "ma-maison-fille-graffiti-numerique.jpeg",
+            "ma-maison-maman-enfants-salon-1.jpeg",
+            "ma-maison-papa-enfants-gateau.jpeg"
+        ],
+        "quantity": 0,
+        "alt": "Photographies de l'exposition"
+    },
+    {
+        "id": "EXPO04",
+        "name": "Nature inspirante, techno inspirée",
+        "description": "Description de l'article 3.",
+        "price": 22,
+        "picture": [
+            "nature-inspirante-citation-einstein.jpeg",
+            "nature-inspirante-fille-microscope.jpeg",
+            "nature-inspirante-jeune-fille-test.jpeg",
+            "nature-inspirante-jeunes-filles-tgv.jpeg",
+            "nature-inspirante-vue-salle.jpeg"
+        ],
+        "quantity": 0,
+        "alt": "Photographies de l'exposition"
+    },
+    {
+        "id": "EXPO05",
+        "name": "La vie en vert",
+        "description": "Description de l'article 3.",
+        "price": 18,
+        "picture": [
+            "vie-en-vert-bouteilles-parfum.jpeg",
+            "vie-en-vert-souris-verte.jpeg",
+            "vie-en-vert-vitrine.jpeg"
+        ],
+        "quantity": 0,
+        "alt": "Photographies de l'exposition"
+    },
+    {
+        "id": "EXPO06",
+        "name": "René Lévesque",
+        "description": "Description de l'article 3.",
+        "price": 15,
+        "picture": [
+            "rene-levesque-art-caricature-1.jpeg",
+            "rene-levesque-visiteur-pq.jpeg",
+            "rene-levesque-visiteurs-archives-1.jpeg",
+            "rene-levesque-visiteurs-boxe-micro-1.jpeg",
+            "rene-levesque-visiteurs-salle-1.jpeg"
+        ],
+        "quantity": 0,
+        "alt": "Photographies de l'exposition"
+    },
+    {
+        "id": "GUI01",
+        "name": "Guide des expositions - Audio",
+        "description": "Description de l'article 3.",
+        "price": 10,
+        "picture": "guide_audio_02.jpeg",
+        "alt": "Illustration du guide audio proposé"
+    },
+    {
+        "id": "GUI03",
+        "name": "Guide des expositions - Accompagnateur",
+        "description": "Description de l'article 3.",
+        "price": 15,
+        "picture": "tour_guide.jpeg",
+        "alt": "Illustration de la visite guidée proposée"
+    },
+    {
+        "id": "BOO01",
+        "name": "Livre souvenir - Album",
+        "description": "Description de l'article 3.",
+        "price": 25,
+        "picture": "album.jpeg",
+        "alt": "Photo produit du livre souvenir version album"
+    },
+    {
+        "id": "BOO02",
+        "name": "Livre souvenir - Album",
+        "description": "Description de l'article 3.",
+        "price": 25,
+        "picture": "album_02.jpeg",
+        "alt": "Photo produit du livre souvenir version album"
+    },
+    {
+        "id": "BOO03",
+        "name": "Livre souvenir - Coffret",
+        "description": "Description de l'article 3.",
+        "price": 58,
+        "picture": "coffret.jpeg",
+        "alt": "Photo produit du livre souvenir version coffret"
+    },
+    {
+        "id": "BOO04",
+        "name": "Livre souvenir - Coffret",
+        "description": "Description de l'article 3.",
+        "price": 58,
+        "picture": "coffret_02.jpeg",
+        "alt": "Photo produit du livre souvenir version coffret"
+    },
+    {
+        "id": "FOO01",
+        "name": "Repas - Collation",
+        "description": "Description de l'article 3.",
+        "price": 15,
+        "picture": "collation.jpeg",
+        "alt": "Photo produit de la collation proposée"
+    },
+    {
+        "id": "FOO02",
+        "name": "Repas - Souper",
+        "description": "Description de l'article 3.",
+        "price": 35,
+        "picture": "repas.jpeg",
+        "alt": "Photographie du repas proposé"
+    }
+]
