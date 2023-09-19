@@ -1,29 +1,32 @@
-import React, { useState} from "react";
+import React, { useContext } from "react";
 import Button from "./Button";
+import { GlobalContext } from '../App.jsx';
+import { observer } from "mobx-react-lite";
 
-function QuantityButton({ row = true }) {
+function QuantityButton({ row = true, className, article }) {
 
-    const [quantity, setQuantity] = useState(0);
+    const { cartStore } = useContext(GlobalContext);
 
     const direction = row ? "row" : "col";
 
-    const addOneArticle = () => {
-        setQuantity(quantity + 1);
+    const handleAddToCart = () => {
+        cartStore.addCart(article);
     };
 
-    const removeOneArticle = () => {
-        setQuantity(quantity - 1);
+    const handleRemoveFromCart = () => {
+        cartStore.removeFromCart(article);
     };
+
 
     return (
 
-        <div className={`flex flex-${direction} justify-between items-center`}>
-            {row === false ? <Button title="Ajouter" icon="faPlus" onClick={addOneArticle} /> : <Button title="Retirer" icon="faMinus" onClick={removeOneArticle} />}
-            {quantity && quantity > 0 ? quantity : 0}
-            {row === false ? <Button title="Retirer" icon="faMinus" onClick={removeOneArticle} /> : <Button title="Ajouter" icon="faPlus" onClick={addOneArticle} />}
+        <div className={`flex flex-${direction} justify-between items-center w-2/12 ${className && className}`}>
+            {row === false ? <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} /> : <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} />}
+            <p className="text-2xl p-3">{cartStore.getQuantityForArticle(article)}</p>
+            {row === false ? <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} /> : <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} />}
         </div>
 
     )
 }
 
-export default QuantityButton;
+export default observer(QuantityButton);

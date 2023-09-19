@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import Nav from '../components/Nav'
 import { GlobalContext } from '../App.jsx';
 import { observer } from 'mobx-react-lite';
+import Panier from '../components/Panier';
 
 function Expositions() {
 
@@ -26,6 +27,7 @@ function Expositions() {
                         <Article key={article.id} article={article} />
                     ))}
                 </div>
+                <Panier />
 
             </main>
         </>

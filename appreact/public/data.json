@@ -4,7 +4,7 @@
         "name": "MLab",
         "description": "Description de l'article 1.",
         "price": 19,
-        "picture": [
+        "pictures": [
             "mlab-numerisation-3d.jpeg",
             "mlab-prototype-re-ak.jpeg",
             "mlab-test-employes.jpeg"
@@ -17,7 +17,7 @@
         "name": "Unique en son genre",
         "description": "Description de l'article 2.",
         "price": 20,
-        "picture": [
+        "pictures": [
             "unique-genre-allee-portraits.jpeg",
             "unique-genre-enseignes-bar.jpeg",
             "unique-genre-papillons.jpeg",
@@ -32,7 +32,7 @@
         "name": "Ma maison",
         "description": "Description de l'article 3.",
         "price": 15,
-        "picture": [
+        "pictures": [
             "ma-maison-course-fille-jardin.jpeg",
             "ma-maison-ecouter-observer-1.jpeg",
             "ma-maison-enfants-salle-bain-1.jpeg",
@@ -48,7 +48,7 @@
         "name": "Nature inspirante, techno inspirée",
         "description": "Description de l'article 3.",
         "price": 22,
-        "picture": [
+        "pictures": [
             "nature-inspirante-citation-einstein.jpeg",
             "nature-inspirante-fille-microscope.jpeg",
             "nature-inspirante-jeune-fille-test.jpeg",
@@ -63,7 +63,7 @@
         "name": "La vie en vert",
         "description": "Description de l'article 3.",
         "price": 18,
-        "picture": [
+        "pictures": [
             "vie-en-vert-bouteilles-parfum.jpeg",
             "vie-en-vert-souris-verte.jpeg",
             "vie-en-vert-vitrine.jpeg"
@@ -76,7 +76,7 @@
         "name": "René Lévesque",
         "description": "Description de l'article 3.",
         "price": 15,
-        "picture": [
+        "pictures": [
             "rene-levesque-art-caricature-1.jpeg",
             "rene-levesque-visiteur-pq.jpeg",
             "rene-levesque-visiteurs-archives-1.jpeg",
@@ -91,7 +91,7 @@
         "name": "Guide des expositions - Audio",
         "description": "Description de l'article 3.",
         "price": 10,
-        "picture": "guide_audio_02.jpeg",
+        "pictures": "guide_audio_02.jpeg",
         "alt": "Illustration du guide audio proposé"
     },
     {
@@ -99,7 +99,7 @@
         "name": "Guide des expositions - Accompagnateur",
         "description": "Description de l'article 3.",
         "price": 15,
-        "picture": "tour_guide.jpeg",
+        "pictures": "tour_guide.jpeg",
         "alt": "Illustration de la visite guidée proposée"
     },
     {
@@ -107,7 +107,7 @@
         "name": "Livre souvenir - Album",
         "description": "Description de l'article 3.",
         "price": 25,
-        "picture": "album.jpeg",
+        "pictures": "album.jpeg",
         "alt": "Photo produit du livre souvenir version album"
     },
     {
@@ -115,7 +115,7 @@
         "name": "Livre souvenir - Album",
         "description": "Description de l'article 3.",
         "price": 25,
-        "picture": "album_02.jpeg",
+        "pictures": "album_02.jpeg",
         "alt": "Photo produit du livre souvenir version album"
     },
     {
@@ -123,7 +123,7 @@
         "name": "Livre souvenir - Coffret",
         "description": "Description de l'article 3.",
         "price": 58,
-        "picture": "coffret.jpeg",
+        "pictures": "coffret.jpeg",
         "alt": "Photo produit du livre souvenir version coffret"
     },
     {
@@ -131,7 +131,7 @@
         "name": "Livre souvenir - Coffret",
         "description": "Description de l'article 3.",
         "price": 58,
-        "picture": "coffret_02.jpeg",
+        "pictures": "coffret_02.jpeg",
         "alt": "Photo produit du livre souvenir version coffret"
     },
     {
@@ -139,7 +139,7 @@
         "name": "Repas - Collation",
         "description": "Description de l'article 3.",
         "price": 15,
-        "picture": "collation.jpeg",
+        "pictures": "collation.jpeg",
         "alt": "Photo produit de la collation proposée"
     },
     {
@@ -147,7 +147,7 @@
         "name": "Repas - Souper",
         "description": "Description de l'article 3.",
         "price": 35,
-        "picture": "repas.jpeg",
+        "pictures": "repas.jpeg",
         "alt": "Photographie du repas proposé"
     }
 ]

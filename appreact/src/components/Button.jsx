@@ -21,7 +21,7 @@ function Button({ icon, link, label, title, onClick }) {
     return (
 
         <button
-            className={`w-10 h-10 text-sm font-semibold bg-sky-300 text-[#3A2D2E] hover:bg-[#B69288] hover:text-[#F9EEE4]  rounded transition duration-00 transform`}
+            className={`w-12 h-12 text-sm font-semibold bg-sky-300 text-[#3A2D2E] hover:bg-[#B69288] hover:text-[#F9EEE4] rounded transition duration-00 transform`}
             title={buttonTitle}
             onClick={handleClick}>
 

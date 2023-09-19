@@ -7,17 +7,17 @@ class Article {
     _name;
     _description;
     _price;
-    _picture;
+    _pictures;
     _quantity;
     _alt;
 
     // Constructeur
-    constructor (id, name, description, price, picture, quantity, alt) {
+    constructor (id, name, description, price, pictures, quantity, alt) {
         this._id = id;
         this._name = name;
         this._description = description;
         this._price = price;
-        this._picture = picture;
+        this._pictures = pictures;
         this._quantity = quantity;
         this._alt = alt;
         makeAutoObservable(this);
@@ -28,7 +28,7 @@ class Article {
     get name() { return this._name; }
     get description() { return this._description; }
     get price() { return this._price; }
-    get picture() { return this._picture; }
+    get pictures() { return this._pictures; }
     get quantity() { return this._quantity; }
     get alt() { return this._alt; }
 
@@ -36,7 +36,7 @@ class Article {
     set name (name) { this._name = name; }
     set description (description) { this._description = description; }
     set price (price) { this._price = price; }
-    set picture (picture) { this._picture = picture; }
+    set pictures (pictures) { this._pictures = pictures; }
     set quantity (quantity) { this._quantity = quantity; }
     set alt(alt) { this._alt = alt; }
 }

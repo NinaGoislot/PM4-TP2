@@ -39,7 +39,7 @@ class ArticleStore {
                 article.name,
                 article.description,
                 article.price,
-                article.picture,
+                article.pictures,
                 article.quantity,
                 article.alt,
             ));
@@ -50,6 +50,10 @@ class ArticleStore {
         }
     }
 
+
+    increaseQuantity(id) {
+       
+    }
 
     getArticleById(id) {
         return this._articles.find(article => article.id === id);

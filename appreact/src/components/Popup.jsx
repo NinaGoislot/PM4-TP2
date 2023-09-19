@@ -16,7 +16,7 @@ return (
         <div className='basis-1/5'>
             <div className='flex flex-wrap flex-col'>
                 <div>
-                <QuantityButton type="minus"/>
+                
                 </div>
                 <div className='absolute bottom-5 right-12 text-6xl'>
                 <Price cost="24$"/>
