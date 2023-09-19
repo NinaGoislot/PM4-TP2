@@ -23,6 +23,9 @@ module.exports = {
         'outer-shadow': '0 0 8px #FDF8E7',      // Ombre externe
         'button-shadow': '0 8px 16px #FDF8E7',      // Ombre externe décalée
       },
+      colors: {
+        'dark-color': '#121517',
+      },
     },
   },
   plugins: [],

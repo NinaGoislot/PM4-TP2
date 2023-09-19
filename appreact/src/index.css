@@ -51,6 +51,10 @@
     @apply rounded w-full
   }
 
+  .border-button {
+    @apply border-2 border-solid border-dark-color
+  }
+
 
   
 }
