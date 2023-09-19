@@ -11,6 +11,7 @@ class Article {
     _quantity;
     _alt;
 
+
     // Constructeur
     constructor (id, name, description, price, pictures, quantity, alt) {
         this._id = id;

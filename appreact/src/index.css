@@ -9,11 +9,12 @@
   :root {
     --primary-background-color: #333333;
     --secondary-background-color: #ececec;
-
+    
     --primary-text-color: #ececec;
     --secondary-text-color: #333333;
 
     --transparancy-dark-color:#0000009d;
+
   }
 
   .primary-background-color{
