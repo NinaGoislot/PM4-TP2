@@ -20,8 +20,11 @@ function Expositions() {
     return (
         <>
             <Nav />
-            <main>
-                <h1>Expositions</h1>
+            <main className='bg-light-color'>
+                <div className='flex flex-wrap pb-20 justify-center'>
+                    <h1 className='basis-full text-5xl italic font-normal text-center mb-4'>Nos expositions</h1>
+                    <div class="relative right-16 basis-48 w-48 h-10 bg-primary-color"></div>
+                </div>
                 <div className='flex flex-wrap justify-center'>
                     {filteredArticles.map(article => (
                         <Article key={article.id} article={article} />

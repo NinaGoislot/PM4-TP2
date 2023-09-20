@@ -26,6 +26,12 @@ module.exports = {
       colors: {
         'dark-color': '#121517',
       },
+      borderColor: {
+        'light-color' : '#FDF8E7', //Couleur claire du projet
+        'dark-color' : '#121517', //Couleur foncée du projet
+        'primary-color' : '#63579E', //Couleur vivante du projet
+
+      },
     },
   },
   plugins: [],
