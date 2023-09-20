@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         'light-color' : '#FDF8E7', //Couleur claire du projet
-        'light-color-lightened' : '#FDF8E7', //Couleur très claire du projet
+        'light-color-lightened' : '#FFFCF4', //Couleur très claire du projet
         'light-color-dark' : '#FDF8E7', //Couleur claire légèrement foncée du projet
         'light-color-shadow' : '#FDF8E7', //Couleur ombragée de la light couleur
         'dark-color' : '#121517', //Couleur foncée du projet
@@ -19,12 +19,13 @@ module.exports = {
         'primary-color' : '#63579E', //Couleur vivante du projet
       },
       boxShadow: {
-        'inner-shadow': 'inset 0 0 12px #FDF8E7', // Ombre interne
-        'outer-shadow': '0 0 8px #FDF8E7',      // Ombre externe
+        'inner-shadow': 'inset 0 0 12px rgba(171, 167, 157, 1)', // Ombre interne
+        'outer-shadow': '0 0 8px rgba(171, 167, 157, 1)',      // Ombre externe
         'button-shadow': '0 8px 16px #FDF8E7',      // Ombre externe décalée
       },
       colors: {
         'dark-color': '#121517',
+        'shadow-color' : '#FDF8E7' 
       },
     },
   },

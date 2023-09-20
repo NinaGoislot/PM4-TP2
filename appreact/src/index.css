@@ -51,12 +51,23 @@
     @apply rounded w-full
   }
 
-  .border-button {
+  .border-custom {
     @apply border-2 border-solid border-dark-color
   }
 
+  .bar-classes {
+    max-height: 50%;
+  }
 
+  .cart-classes {
+    max-height: 50%;
+  overflow-y: auto;
+  }
   
+.inner-shadow {
+  @apply shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-inner-shadow
+}
+
 }
 
 @layer utilities {
