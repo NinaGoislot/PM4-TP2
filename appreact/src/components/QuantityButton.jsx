@@ -20,7 +20,7 @@ function QuantityButton({ row = true, className, article }) {
 
     return (
 
-        <div className={`flex flex-${direction} justify-between items-center w-2/12 ${className && className}`}>
+        <div className={`flex flex-${direction} justify-between items-center ${className && className}`}>
             {row === false ? <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} /> : <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} />}
             <p className="text-2xl p-3">{cartStore.getQuantityForArticle(article)}</p>
             {row === false ? <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} /> : <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} />}

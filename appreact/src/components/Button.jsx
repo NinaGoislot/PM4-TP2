@@ -33,7 +33,7 @@ function Button({ icon, link, label, title, onClick }) {
     return (
 
         <button
-            className={`w-12 h-12 text-xl border-button bg-light-color-lightened text-primary-color rounded`}
+            className={`w-12 h-12 text-xl border-custom bg-light-color-lightened text-primary-color rounded`}
             title={buttonTitle}
             onClick={handleClick}>
 
