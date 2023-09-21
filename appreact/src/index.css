@@ -9,34 +9,29 @@
   :root {
     --primary-background-color: #333333;
     --secondary-background-color: #ececec;
-    
+
     --primary-text-color: #ececec;
     --secondary-text-color: #333333;
 
-    --transparancy-dark-color:#0000009d;
+    --transparancy-dark-color: #0000009d;
 
   }
 
-  .primary-background-color{
-    background-color:var(--primary-background-color);
+  html,
+  body,
+  .App {
+    min-height: 100vh;
   }
 
-  .secondary-background-color{
-    background-color:var(--secondary-background-color);
+  .App {
+    display: flex;
+    flex-direction: column;
   }
 
-  .primary-text-color{
-    color:var(--primary-text-color);
+  main {
+    flex-grow: 1;
   }
 
-  .secondary-text-color{
-    color:var(--secondary-text-color);
-  }
-
-  .bg-transparancy-dark-color {
-    background-color:var(--transparancy-dark-color);
-  }
-  
   .slider {
     position: relative;
     width: 500%;
@@ -44,11 +39,7 @@
     left: 0;
     text-align: left;
     font-size: 0;
-    animation: 15s slidy infinite; 
-  }
-
-  .article-img {
-    @apply rounded w-full
+    animation: 15s slidy infinite;
   }
 
   .border-custom {
@@ -61,26 +52,59 @@
 
   .cart-classes {
     max-height: 50%;
-  overflow-y: auto;
+    overflow-y: auto;
   }
-  
-.inner-shadow {
-  @apply shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-inner-shadow
-}
+
+  .inner-shadow {
+    @apply shadow-[0_35px_60px_-15px_rgba(0, 0, 0, 0.3)] shadow-inner-shadow
+  }
+
+  .text-standard-size {
+    @apply text-lg
+  }
+
+  .cart-classes li:not(:first-child) {
+    @apply border-t-2 border-primary-color
+  }
 
 }
 
-@layer utilities {
-}
+@layer utilities {}
 
 @keyframes slidy {
-  0% { left: 0%; }
-  20% { left: 0%; }
-  25% { left: -100%; }
-  45% { left: -100%; }
-  50% { left: -200%; }
-  70% { left: -200%; }
-  75% { left: -300%; }
-  95% { left: -300%; }
-  100% { left: -400%; }
+  0% {
+    left: 0%;
   }
+
+  20% {
+    left: 0%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
+}

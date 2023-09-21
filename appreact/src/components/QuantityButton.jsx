@@ -3,7 +3,7 @@ import Button from "./Button";
 import { GlobalContext } from '../App.jsx';
 import { observer } from "mobx-react-lite";
 
-function QuantityButton({ row = true, className, article }) {
+function QuantityButton({ row = true, className, article, small }) {
 
     const { cartStore } = useContext(GlobalContext);
 
@@ -21,9 +21,9 @@ function QuantityButton({ row = true, className, article }) {
     return (
 
         <div className={`flex flex-${direction} justify-between items-center ${className && className}`}>
-            {row === false ? <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} /> : <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} />}
+            {row === false ? <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} small={small && small === true ? true : false}/> : <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} small={small && small === true ? true : false}/>}
             <p className="text-2xl p-3">{cartStore.getQuantityForArticle(article)}</p>
-            {row === false ? <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} /> : <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} />}
+            {row === false ? <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} small={small && small === true ? true : false}/> : <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} small={small && small === true ? true : false}/>}
         </div>
 
     )

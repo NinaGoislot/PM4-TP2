@@ -14,7 +14,7 @@ Obligatoire pour le composant :
 **/
 
 
-function Button({ icon, link, label, title, onClick }) {
+function Button({ icon, link, label, title, onClick, small=false, width, height }) {
 
     const selectedIcon = icon ? fas[icon] : null;
     const buttonTitle = title || label;
@@ -33,16 +33,18 @@ function Button({ icon, link, label, title, onClick }) {
     return (
 
         <button
-            className={`w-12 h-12 text-xl border-custom bg-light-color-lightened text-primary-color rounded`}
+            className={`${small && small === true && width === undefined ? 'w-6' : width != undefined ? width : 'w-12'}
+                        ${small && small === true && height === undefined ? ' h-6' : height != undefined ? height : 'h-12'}
+                        text-xl border-custom bg-light-color-lightened text-primary-color rounded`}
             title={buttonTitle}
             onClick={handleClick}>
 
-            <Link to={link}>
-                {label && <span>{label}</span>}
+            <Link to={link} className='flex justify-center'>
+                {label && <span>{label}</span>} 
                 {selectedIcon && (
                     <FontAwesomeIcon
                         icon={selectedIcon}
-                        className={label ? 'ml-1' : ''}
+                        className={`${label ? 'ml-1' : ''} ${small && small === true ? 'w-2/3 h-2/3' : ''}`}
                     />
                 )}
             </Link>
