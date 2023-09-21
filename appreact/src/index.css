@@ -67,9 +67,23 @@
     @apply border-t-2 border-primary-color
   }
 
+  h1{
+    font-family: 'Karmina italic';
+  }
+  
+
 }
 
-@layer utilities {}
+@layer utilities {
+  @font-face {
+    font-family: 'Karmina';
+    src: url('../public/fonts/Karmina\ Regular.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Karmina italic';
+    src: url('../public/fonts/Karmina\ Italic.otf') format('truetype');
+  }
+}
 
 @keyframes slidy {
   0% {
