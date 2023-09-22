@@ -5,10 +5,12 @@ import { observer } from "mobx-react-lite";
 import Bar from "./Bar";
 import QuantityButton from './QuantityButton';
 import Button from './Button';
+import { useLocation } from 'react-router-dom';
 
 function Panier() {
 
     const { cartStore } = useContext(GlobalContext);
+
 
     //  {cart.map(article => ( <p>{article.name}</p> ))}
 
