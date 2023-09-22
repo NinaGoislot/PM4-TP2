@@ -65,9 +65,43 @@
     animation-iteration-count:infinite;
   }
 
+  h1,h2,h3{
+    font-family: 'Karmina italic';
+  }
+
+  p{
+    font-family: 'MerriweatherSansRegular';
+  }
+  
+
 }
 
-@layer utilities {}
+@layer utilities {
+  @font-face {
+    font-family: 'Karmina';
+    src: url('../public/fonts/Karmina\ Regular.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Karmina italic';
+    src: url('../public/fonts/Karmina\ Italic.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MerriweatherSansRegular';
+    src: url('../public/fonts/MerriweatherSans-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MerriweatherSansBold';
+    src: url('../public/fonts/MerriweatherSans-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MerriweatherSansItalic';
+    src: url('../public/fonts/MerriweatherSans-Italic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MerriweatherSansMedium';
+    src: url('../public/fonts/MerriweatherSans-Medium.ttf') format('truetype');
+  }
+}
 
 @keyframes tap {
 	0% {
