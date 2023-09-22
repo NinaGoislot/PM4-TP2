@@ -32,7 +32,7 @@ function Expositions() {
     return (
         <>
             <Nav />
-            <main>
+            <main className='w-full h-screen'>
                 <div className='flex flex-wrap pb-20 justify-center'>
                     <h1 className='basis-full text-5xl italic font-normal text-center mb-4'>Nos expositions</h1>
                     <div className="relative right-16 basis-48 w-48 h-10 bg-primary-color"></div>
