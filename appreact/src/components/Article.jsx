@@ -16,10 +16,10 @@ function Article({ article, popup = false }) {
                 <div className="flex flex-col w-10/12 h-full">
                     <div className="overflow-hidden">
                         {popup === false
-                            ? <img className="w-full" src={`../../pictures/${article.pictures[0]}`} />
+                            ? <img className="object-contain w-96 h-48" src={`../../pictures/${article.pictures[0]}`} />
                             : <figure className="slider flex">
                                 {article.pictures.map(picture => (
-                                    <img className="float-left " src={`../../pictures/${picture}`} alt={article.alt}></img>
+                                    <img className="float-left" src={`../../pictures/${picture}`} alt={article.alt}></img>
                                 ))}
                             </figure>}
 
