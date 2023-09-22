@@ -6,16 +6,6 @@
 @layer base {}
 
 @layer components {
-  :root {
-    --primary-background-color: #333333;
-    --secondary-background-color: #ececec;
-
-    --primary-text-color: #ececec;
-    --secondary-text-color: #333333;
-
-    --transparancy-dark-color: #0000009d;
-
-  }
 
   html,
   body,
@@ -24,8 +14,7 @@
   }
 
   .App {
-    display: flex;
-    flex-direction: column;
+    @apply bg-light-color flex flex-col
   }
 
   main {
@@ -44,6 +33,10 @@
 
   .border-custom {
     @apply border-2 border-solid border-dark-color
+  }
+  
+  .light-border {
+    @apply border-2 border-solid border-light-color rounded
   }
 
   .bar-classes {
@@ -67,9 +60,31 @@
     @apply border-t-2 border-primary-color
   }
 
+  .hand-tap {
+    animation: tap 1.25s ease-out backwards;
+    animation-iteration-count:infinite;
+  }
+
 }
 
 @layer utilities {}
+
+@keyframes tap {
+	0% {
+		transform: rotateX(0deg);
+	}
+	10% {
+    transform: rotateX(12.5deg);
+    transform: rotateZ(-12.5deg);
+	}
+	25% {
+		transform: rotateX(25deg);
+    transform: rotateZ(-20deg);
+	}
+  75% {
+    transform: rotateZ(0deg);
+	}
+}
 
 @keyframes slidy {
   0% {

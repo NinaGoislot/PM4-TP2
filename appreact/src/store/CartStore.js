@@ -1,4 +1,4 @@
-import { makeAutoObservable} from "mobx";
+import { makeAutoObservable } from "mobx";
 
 
 class CartStore {
@@ -9,9 +9,9 @@ class CartStore {
         if (currentCart == null) {
             this._cart = [];
         } else {
-           this._cart = JSON.parse(currentCart);
+            this._cart = JSON.parse(currentCart);
         }
-        
+
         makeAutoObservable(this);
     }
 
@@ -20,13 +20,13 @@ class CartStore {
     set cart(cart) { this._cart = cart; }
 
     //Sauvegarde le panier dans le localStorage
-    saveCart ()  {
-        localStorage.setItem("Panier", JSON.stringify(this.cart)); 
+    saveCart() {
+        localStorage.setItem("Panier", JSON.stringify(this.cart));
     }
 
     //Ajoute un article dans le panier
-    addCart (article) {
-        let foundArticle = this.cart.find (item => item.id == article.id );
+    addCart(article) {
+        let foundArticle = this.cart.find(item => item.id == article.id);
         if (foundArticle != undefined) {
             foundArticle.quantity++;
         } else {
@@ -37,15 +37,19 @@ class CartStore {
     }
 
     //Retire un article du panier
-    removeFromCart (article) {
-        this.cart = this.cart.filter(item => item.id != article.id);
+    removeFromCart(article) {
+        if (article.quantity > 1) {
+            article.quantity--;
+        } else {
+            this.cart = this.cart.filter(item => item.id != article.id);
+        }
         this.saveCart();
     }
 
     changeQuantity(article, quantity) {
-        let foundArticle = this.cart.find (item => item.id == article.id );
+        let foundArticle = this.cart.find(item => item.id == article.id);
         if (foundArticle != undefined) {
-            foundArticle.quantity+= quantity;
+            foundArticle.quantity += quantity;
             if (foundArticle.quantity <= 0) {
                 this.removeFromCart(foundArticle);
             } else {
@@ -76,8 +80,8 @@ class CartStore {
     getQuantityForArticle(article) {
         const foundArticle = this.cart.find((item) => item.id === article.id);
         return foundArticle ? foundArticle.quantity : 0;
-      }
-   
+    }
+
     //Récupère le contenu du panier sous forme d'objet
     getCartContents() {
         const cartContents = [];
@@ -92,8 +96,8 @@ class CartStore {
         return cartContents;
     }
 
-     // Vide le localStorage
-     clearLocalStorage() {
+    // Vide le localStorage
+    clearLocalStorage() {
         localStorage.removeItem("Panier");
         this._cart = [];
         this.saveCart();
