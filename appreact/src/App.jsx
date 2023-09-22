@@ -7,6 +7,8 @@ import Screensaver from './pages/Screensaver';
 import Home from './pages/Home';
 import Extras from './pages/Extras';
 import Expositions from './pages/Expositions';
+import Paiement from './pages/Paiement';
+import Summary from './pages/Summary';
 
 
 export const GlobalContext = createContext();
@@ -21,6 +23,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/extras" element={<Extras />} />
             <Route path="/expositions" element={<Expositions />} />
+            <Route path="/summary" element={<Summary />} />
+            <Route path="/paiement" element={<Paiement />} />
           </Routes>
         </BrowserRouter>
       </GlobalContext.Provider>

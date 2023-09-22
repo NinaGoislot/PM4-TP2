@@ -23,7 +23,7 @@ function Extras() {
     return (
         <>
             <Nav />
-            <main>
+            <main className='w-full h-full mb-96'>
                 <div className='flex flex-wrap pb-20 justify-center'>
                     <h1 className='basis-full text-5xl italic font-normal text-center mb-4'>Extras</h1>
                     <div className="relative left-16 basis-48 w-48 h-10 bg-primary-color"></div>

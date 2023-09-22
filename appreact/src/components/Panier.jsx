@@ -62,7 +62,7 @@ function Panier() {
 
             <ul className='flex justify-between'>
                 <NavItem name="Abandonner ma commande" link="/expositions" onClick={handleDeleteClick} iconRight={false}/>
-                <NavItem name="Confirmer ma commande" link="/expositions" />
+                <NavItem name="Confirmer ma commande" link="/summary" />
             </ul>
         </div>
 
