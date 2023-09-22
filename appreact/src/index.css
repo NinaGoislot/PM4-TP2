@@ -65,6 +65,132 @@
     animation-iteration-count:infinite;
   }
 
+}
+
+@layer utilities {}
+
+@keyframes tap {
+	0% {
+		transform: rotateX(0deg);
+	}
+	10% {
+    transform: rotateX(12.5deg);
+    transform: rotateZ(-12.5deg);
+	}
+	25% {
+		transform: rotateX(25deg);
+    transform: rotateZ(-20deg);
+	}
+  75% {
+    transform: rotateZ(0deg);
+	}
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+
+  20% {
+    left: 0%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
+}@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {}
+
+@layer components {
+  :root {
+    --primary-background-color: #333333;
+    --secondary-background-color: #ececec;
+
+    --primary-text-color: #ececec;
+    --secondary-text-color: #333333;
+
+    --transparancy-dark-color: #0000009d;
+
+  }
+
+  html,
+  body,
+  .App {
+    min-height: 100vh;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .slider {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 15s slidy infinite;
+  }
+
+  .border-custom {
+    @apply border-2 border-solid border-dark-color
+  }
+
+  .bar-classes {
+    max-height: 50%;
+  }
+
+  .cart-classes {
+    max-height: 50%;
+    overflow-y: auto;
+  }
+
+  .inner-shadow {
+    @apply shadow-[0_35px_60px_-15px_rgba(0, 0, 0, 0.3)] shadow-inner-shadow
+  }
+
+  .text-standard-size {
+    @apply text-lg
+  }
+
+  .cart-classes li:not(:first-child) {
+    @apply border-t-2 border-primary-color
+  }
+
   h1,h2,h3{
     font-family: 'Karmina italic';
   }
@@ -101,23 +227,6 @@
     font-family: 'MerriweatherSansMedium';
     src: url('../public/fonts/MerriweatherSans-Medium.ttf') format('truetype');
   }
-}
-
-@keyframes tap {
-	0% {
-		transform: rotateX(0deg);
-	}
-	10% {
-    transform: rotateX(12.5deg);
-    transform: rotateZ(-12.5deg);
-	}
-	25% {
-		transform: rotateX(25deg);
-    transform: rotateZ(-20deg);
-	}
-  75% {
-    transform: rotateZ(0deg);
-	}
 }
 
 @keyframes slidy {
