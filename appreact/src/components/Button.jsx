@@ -14,7 +14,7 @@ Obligatoire pour le composant :
 **/
 
 
-function Button({ icon, link, label, title, onClick, small=false, width, height }) {
+function Button({ icon, link, label, title, onClick, small=false, width, height, disabled = false }) {
 
     const selectedIcon = icon ? fas[icon] : null;
     const buttonTitle = title || label;
@@ -35,7 +35,7 @@ function Button({ icon, link, label, title, onClick, small=false, width, height 
         <button
             className={`${small && small === true && width === undefined ? 'w-6' : width != undefined ? width : 'w-12'}
                         ${small && small === true && height === undefined ? ' h-6' : height != undefined ? height : 'h-12'}
-                        text-xl border-custom bg-light-color-lightened text-primary-color rounded`}
+                        text-xl border-custom bg-light-color-lightened text-primary-color rounded ${disabled === true ? 'disabled' : ''}`}
             title={buttonTitle}
             onClick={handleClick}>
 

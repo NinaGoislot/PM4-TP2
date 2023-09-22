@@ -91,7 +91,9 @@
         "name": "Guide des expositions - Audio",
         "description": "Description de l'article 3.",
         "price": 10,
-        "pictures": "guide_audio_02.jpeg",
+        "pictures": [
+            "guide_audio_02.jpeg"
+        ],
         "alt": "Illustration du guide audio proposé"
     },
     {
@@ -99,7 +101,9 @@
         "name": "Guide des expositions - Accompagnateur",
         "description": "Description de l'article 3.",
         "price": 15,
-        "pictures": "tour_guide.jpeg",
+        "pictures": [
+            "tour_guide.jpeg"
+        ],
         "alt": "Illustration de la visite guidée proposée"
     },
     {
@@ -107,7 +111,9 @@
         "name": "Livre souvenir - Album",
         "description": "Description de l'article 3.",
         "price": 25,
-        "pictures": "album.jpeg",
+        "pictures": [
+            "album.jpeg"
+        ],
         "alt": "Photo produit du livre souvenir version album"
     },
     {
@@ -115,7 +121,9 @@
         "name": "Livre souvenir - Album",
         "description": "Description de l'article 3.",
         "price": 25,
-        "pictures": "album_02.jpeg",
+        "pictures": [
+            "album_02.jpeg"
+        ],
         "alt": "Photo produit du livre souvenir version album"
     },
     {
@@ -123,7 +131,9 @@
         "name": "Livre souvenir - Coffret",
         "description": "Description de l'article 3.",
         "price": 58,
-        "pictures": "coffret.jpeg",
+        "pictures": [
+            "coffret.jpeg"
+        ],
         "alt": "Photo produit du livre souvenir version coffret"
     },
     {
@@ -131,7 +141,9 @@
         "name": "Livre souvenir - Coffret",
         "description": "Description de l'article 3.",
         "price": 58,
-        "pictures": "coffret_02.jpeg",
+        "pictures": [ 
+            "coffret_02.jpeg"
+        ],
         "alt": "Photo produit du livre souvenir version coffret"
     },
     {
@@ -139,7 +151,9 @@
         "name": "Repas - Collation",
         "description": "Description de l'article 3.",
         "price": 15,
-        "pictures": "collation.jpeg",
+        "pictures": [
+            "collation.jpeg"
+        ],
         "alt": "Photo produit de la collation proposée"
     },
     {
@@ -147,7 +161,9 @@
         "name": "Repas - Souper",
         "description": "Description de l'article 3.",
         "price": 35,
-        "pictures": "repas.jpeg",
+        "pictures": [
+            "repas.jpeg"
+        ],
         "alt": "Photographie du repas proposé"
     }
 ]
