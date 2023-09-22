@@ -17,7 +17,7 @@ function App() {
       <GlobalContext.Provider value={store}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Screensaver />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/extras" element={<Extras />} />
             <Route path="/expositions" element={<Expositions />} />

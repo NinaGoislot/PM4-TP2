@@ -25,8 +25,8 @@ function Extras() {
             <Nav />
             <main>
                 <div className='flex flex-wrap pb-20 justify-center'>
-                    <h1 className='basis-full text-5xl italic font-normal text-center mb-4'>Miam le gras</h1>
-                    <div className="relative right-16 basis-48 w-48 h-10 bg-primary-color"></div>
+                    <h1 className='basis-full text-5xl italic font-normal text-center mb-4'>Extras</h1>
+                    <div className="relative left-16 basis-48 w-48 h-10 bg-primary-color"></div>
                 </div>
                 <div className='flex flex-col gap-y-20'>
                     {/* Section guide*/}
