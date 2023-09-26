@@ -42,6 +42,9 @@ class ArticleStore {
                 article.pictures,
                 article.quantity,
                 article.alt,
+                article.duration,
+                article.attendance,
+                article.infos,
             ));
 
             console.log(this._articles);

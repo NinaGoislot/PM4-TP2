@@ -184,7 +184,7 @@
     {
         "id": "FOO01",
         "name": "Repas - Collation",
-        "description": "Savourez und délicieuse collation tout en profitant de l'exposition. Parfait pour une petite pause gourmande à tout moment de la journée. Présentez vous, muni de votre ticket, au stand du hall principal avant 18h pour récupérer votre collation.",
+        "description": "Savourez une délicieuse collation tout en profitant de l'exposition. Parfait pour une petite pause gourmande à tout moment de la journée. Présentez vous, muni de votre ticket, au stand du hall principal avant 18h pour récupérer votre collation.",
         "price": 15,
         "pictures": [
             "collation.jpeg"
@@ -205,6 +205,6 @@
         "alt": "Photographie du repas proposé",
         "duration": "",
         "attendance": "",
-        "infos": "Le souper est adaptés aux végérations et aux consommateurs de viande Hallal. Vous pourrez en faire la demande lors de votre arrivée."
+        "infos": "Le souper est adapté aux végétariens et aux consommateurs de viande Hallal. Vous pourrez en faire la demande lors de votre arrivée."
     }
 ]

@@ -27,7 +27,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div class="fixed top-[50%] left-[43%] w-36 h-2 bg-dark-color"></div>
+                    <div className="fixed top-[50%] left-[43%] w-36 h-2 bg-dark-color"></div>
 
                     <div className="flex bottom-1/3 right-20 w-screen" onClick={toExtras}>
                         <img className= "fixed right-28 bottom-1/4 w-7/12 h-auto border-dark-color shadow-outer-shadow border-4" src="../../extras.jpg" alt="" />

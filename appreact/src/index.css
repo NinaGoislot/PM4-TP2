@@ -197,12 +197,11 @@
   }
 
   h1,
-  h2,
-  h3 {
+  h2 {
     font-family: 'Karmina italic';
   }
 
-  p {
+  p, h3 {
     font-family: 'MerriweatherSansRegular';
   }
 

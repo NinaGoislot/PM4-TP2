@@ -6,6 +6,7 @@ import Bar from "./Bar";
 import QuantityButton from './QuantityButton';
 import Button from './Button';
 import { useLocation } from 'react-router-dom';
+import NavigationButton from './NavigationButton';
 
 function Panier() {
 
@@ -36,7 +37,7 @@ function Panier() {
     return (
         <>
 
-        <div className="w-11/12 p-4 border-custom fixed flex flex-col bg-light-color-lightened h-50 right-1/2 bottom-0 translate-x-2/4">
+        <div className="w-11/12 p-6 border-custom fixed flex flex-col bg-light-color-lightened h-50 right-1/2 bottom-0 translate-x-2/4">
             <div className="flex justify-center  basis-1/4 items-stretch justify-evenly">
                 <div className='flex items-center'>
                     <div className='h-3/5 border-r-2 border-dark-color text-2xl pr-4 flex items-center'>
@@ -51,7 +52,7 @@ function Panier() {
                             <div className='flex items-center justify-between w-2/5'>
                                 <QuantityButton article={article} small={true} />
                                 <Bar row={false} height="h-12" />
-                                <p>Quantité : {article.quantity}</p>
+                                <p className='text-2xl'>{article.price} $</p>
                             </div>
                         </li>
                     ))}
@@ -61,10 +62,9 @@ function Panier() {
                     </div>
                 </ul>
             </div>
-
-            <ul className='flex justify-between'>
-                <NavItem name="Abandonner ma commande" link="/expositions" onClick={handleDeleteClick} iconRight={false}/>
-                <NavItem name="Confirmer ma commande" link="/summary" />
+            <ul className='flex justify-between mt-10'>
+                <NavigationButton label="Abandonner ma commande" link="/expositions" onClick={handleDeleteClick} RedBg={true}/>
+                <NavigationButton label="Confirmer ma commande" link="/summary" GreenBg={true}/>
             </ul>
         </div>
 
