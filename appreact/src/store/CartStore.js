@@ -41,6 +41,7 @@ class CartStore {
         if (article.quantity > 1) {
             article.quantity--;
         } else {
+            article.quantity = 0;
             this.cart = this.cart.filter(item => item.id != article.id);
         }
         this.saveCart();

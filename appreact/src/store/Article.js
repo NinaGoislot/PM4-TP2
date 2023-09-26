@@ -10,10 +10,13 @@ class Article {
     _pictures;
     _quantity;
     _alt;
+    _duration;
+    _attendance;
+    _infos;
 
 
     // Constructeur
-    constructor (id, name, description, price, pictures, quantity, alt) {
+    constructor (id, name, description, price, pictures, quantity, alt, duration, attendance, infos) {
         this._id = id;
         this._name = name;
         this._description = description;
@@ -21,6 +24,9 @@ class Article {
         this._pictures = pictures;
         this._quantity = quantity;
         this._alt = alt;
+        this._duration = duration;
+        this._attendance = attendance;
+        this._infos = infos;
         makeAutoObservable(this);
     }
 
@@ -32,6 +38,9 @@ class Article {
     get pictures() { return this._pictures; }
     get quantity() { return this._quantity; }
     get alt() { return this._alt; }
+    get duration() { return this._duration; }
+    get attendance() { return this._attendance; }
+    get infos() { return this._infos; }
 
     // Accesseurs d'écriture
     set name (name) { this._name = name; }
@@ -40,5 +49,8 @@ class Article {
     set pictures (pictures) { this._pictures = pictures; }
     set quantity (quantity) { this._quantity = quantity; }
     set alt(alt) { this._alt = alt; }
+    set duration(duration) { this._duration = duration; }
+    set attendance(attendance) { this._attendance = attendance; }
+    set infos(infos) { this._infos = infos; }
 }
 export default Article;

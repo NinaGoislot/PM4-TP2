@@ -31,7 +31,7 @@ function Expositions() {
 
     return (
         <>
-            <Nav />
+            <Nav page="expositions"/>
             <main className='w-full h-screen'>
                 <div className='flex flex-wrap pb-20 justify-center'>
                     <h1 className='basis-full text-5xl italic font-normal text-center mb-4'>Nos expositions</h1>
