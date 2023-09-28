@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import NavItem from './Navitem';
 import { GlobalContext } from '../App.jsx';
 import { observer } from "mobx-react-lite";
@@ -6,6 +6,7 @@ import Bar from "./Bar";
 import QuantityButton from './QuantityButton';
 import Button from './Button';
 import { useLocation } from 'react-router-dom';
+import NavigationButton from './NavigationButton';
 
 function Panier() {
 
@@ -22,7 +23,7 @@ function Panier() {
   
     const handleModalConfirm = () => {
       setShowModal(false);
-      clearStorage();
+        clearStorage();
     };
   
     const handleModalCancel = () => {
@@ -33,10 +34,33 @@ function Panier() {
         cartStore.clearLocalStorage();
     };
 
-    return (
-        <>
+    const isCartEmpty = cartStore.cart.length === 0;
 
-        <div className="w-11/12 p-4 border-custom fixed flex flex-col bg-light-color-lightened h-50 right-1/2 bottom-0 translate-x-2/4">
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const [animationClass, setAnimationClass] = useState("");
+
+    useEffect(() => {
+      if (isCartEmpty && !isAnimating) {
+        setIsAnimating(true);
+        setAnimationClass("slide-out-panier");
+        
+        setTimeout(() => {
+          setIsAnimating(false);
+          setAnimationClass("");
+        }, 500);
+      } else if (!isCartEmpty) {
+        setAnimationClass("slide-in-panier");
+      }
+    }, [isCartEmpty]);
+
+    const shouldDisplayCart = !isCartEmpty || isAnimating;
+
+    
+      return (
+          <>
+ {shouldDisplayCart && (
+<div className={`w-11/12 p-6 border-custom fixed flex flex-col bg-light-color-lightened h-50 right-1/2 bottom-0 translate-x-2/4 ${animationClass}`}>
             <div className="flex justify-center  basis-1/4 items-stretch justify-evenly">
                 <div className='flex items-center'>
                     <div className='h-3/5 border-r-2 border-dark-color text-2xl pr-4 flex items-center'>
@@ -51,7 +75,7 @@ function Panier() {
                             <div className='flex items-center justify-between w-2/5'>
                                 <QuantityButton article={article} small={true} />
                                 <Bar row={false} height="h-12" />
-                                <p>Quantité : {article.quantity}</p>
+                                <p className='text-2xl'>{article.price} $</p>
                             </div>
                         </li>
                     ))}
@@ -61,13 +85,12 @@ function Panier() {
                     </div>
                 </ul>
             </div>
-
-            <ul className='flex justify-between'>
-                <NavItem name="Abandonner ma commande" onClick={handleDeleteClick} iconRight={false} link="/expositions"/>
-                <NavItem name="Confirmer ma commande" link="/summary" />
+            <ul className='flex justify-between mt-10'>
+                <NavigationButton label="Abandonner ma commande" link="/expositions" onClick={handleDeleteClick} RedBg={true}/>
+                <NavigationButton label="Confirmer ma commande" link="/summary" GreenBg={true}/>
             </ul>
         </div>
-
+      )}
         {/*Modal de confirmation*/}
         {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">

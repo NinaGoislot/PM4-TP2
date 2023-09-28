@@ -33,9 +33,9 @@ function Button({ icon, link, label, title, onClick, small=false, width, height,
     return (
 
         <button
-            className={`${small && small === true && width === undefined ? 'w-6' : width != undefined ? width : 'w-12'}
-                        ${small && small === true && height === undefined ? ' h-6' : height != undefined ? height : 'h-12'}
-                        text-xl border-custom bg-light-color-lightened text-primary-color rounded ${disabled === true ? 'disabled' : ''}`}
+            className={`${small && small === true && width === undefined ? 'w-6' : width !== undefined ? width : 'w-12'}
+                        ${small && small === true && height === undefined ? ' h-6' : height !== undefined ? height : 'h-12'}
+                        text-xl rounded ${disabled === true ? 'disabled' : 'border-custom bg-light-color-lightened text-primary-color'}`}
             title={buttonTitle}
             onClick={handleClick}>
 

@@ -21,7 +21,7 @@ module.exports = {
       boxShadow: {
         'inner-shadow': 'inset 0 0 12px rgba(171, 167, 157, 1)', // Ombre interne
         'outer-shadow': '0 0 8px rgba(171, 167, 157, 1)',      // Ombre externe
-        'button-shadow': '0 8px 16px rgba(171, 167, 157, 1)',      // Ombre externe décalée
+        'button-shadow': '2px 3px 10px rgba(171, 167, 157, 1)',      // Ombre externe décalée
       },
       colors: {
         'dark-color': '#121517',

@@ -34,7 +34,7 @@
   .border-custom {
     @apply border-2 border-solid border-dark-color
   }
-  
+
   .light-border {
     @apply border-2 border-solid border-light-color rounded
   }
@@ -62,7 +62,21 @@
 
   .hand-tap {
     animation: tap 1.25s ease-out backwards;
-    animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .custom-ping {
+    animation: ping 1.25s ease-out backwards;
+    animation-delay: 0.3125s;
+    animation-iteration-count: infinite;
+  }
+
+  .slide-in-panier {
+    animation: slideInFromTop 0.5s forwards;
+  }
+  
+  .slide-out-panier {
+    animation: slideOutToBottom 0.5s forwards;
   }
 
 }
@@ -70,20 +84,53 @@
 @layer utilities {}
 
 @keyframes tap {
-	0% {
-		transform: rotateX(0deg);
-	}
-	10% {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  10% {
     transform: rotateX(12.5deg);
     transform: rotateZ(-12.5deg);
-	}
-	25% {
-		transform: rotateX(25deg);
+  }
+
+  25% {
+    transform: rotateX(25deg);
     transform: rotateZ(-20deg);
-	}
+  }
+
   75% {
     transform: rotateZ(0deg);
-	}
+  }
+
+}
+
+@keyframes ping {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+  }
+}
+
+@keyframes slideInPanier {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutPanier {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }
 
 @keyframes slidy {
@@ -122,7 +169,9 @@
   100% {
     left: -400%;
   }
-}@tailwind base;
+}
+
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -191,14 +240,19 @@
     @apply border-t-2 border-primary-color
   }
 
-  h1,h2,h3{
+  h1,
+  h2 {
     font-family: 'Karmina italic';
   }
 
-  p{
+  p, h3 {
     font-family: 'MerriweatherSansRegular';
   }
-  
+
+  .disabled {
+    @apply bg-neutral-300 text-neutral-500
+  }
+
 
 }
 
@@ -207,22 +261,27 @@
     font-family: 'Karmina';
     src: url('../public/fonts/Karmina\ Regular.otf') format('truetype');
   }
+
   @font-face {
     font-family: 'Karmina italic';
     src: url('../public/fonts/Karmina\ Italic.otf') format('truetype');
   }
+
   @font-face {
     font-family: 'MerriweatherSansRegular';
     src: url('../public/fonts/MerriweatherSans-Regular.ttf') format('truetype');
   }
+
   @font-face {
     font-family: 'MerriweatherSansBold';
     src: url('../public/fonts/MerriweatherSans-Bold.ttf') format('truetype');
   }
+
   @font-face {
     font-family: 'MerriweatherSansItalic';
     src: url('../public/fonts/MerriweatherSans-Italic.ttf') format('truetype');
   }
+
   @font-face {
     font-family: 'MerriweatherSansMedium';
     src: url('../public/fonts/MerriweatherSans-Medium.ttf') format('truetype');
