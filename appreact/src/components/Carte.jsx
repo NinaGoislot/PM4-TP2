@@ -22,7 +22,7 @@ function Carte({}) {
         <div className='flex mt-60 justify-center items-center'>
          <div className='flex bg-dark-color text-white w-[680px] p-3 justify-center items-center gap-6 self-stretch'>
             <p>RESTE À PAYER :</p>
-            <p className='text-2xl'>{cartStore.getTotalPrice()} $</p>
+            <p className='text-2xl'>{cartStore.getGrossCartTotal()} $</p>
             </div>
         </div>
         </div>

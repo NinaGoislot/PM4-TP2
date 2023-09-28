@@ -23,7 +23,7 @@ function NavigationButton({ link, label, title, onClick, width, height, GreenBg 
     return (
 
         <button
-            className={`${h} ${w} ${bgColor} text-xl bg-light-color-lightened`}
+            className={`${h} ${w} ${bgColor} text-xl`}
             title={buttonTitle}
             onClick={onClick}>
 
