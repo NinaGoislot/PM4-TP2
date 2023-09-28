@@ -14,7 +14,7 @@ function Paiement() {
 
     return (
         <main className='bg-light-color'>
-            <div>
+            <div  className=''>
                 <div className='flex justify-center items-center mt-20'>
                     <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="36" cy="36" r="20" transform="rotate(-180 36 36)" fill="#63579E" />
@@ -32,7 +32,7 @@ function Paiement() {
                     </div>
                 </div>
                 <div className='text-center flex flex-wrap justify-center items-center mt-[80px]'>
-                    <div className='flex flex-wrap border-4 border-dark-color w-[300px] h-[480px] px-[16px] py-[24px] justify-center items-center mr-20'>
+                    <div className='flex flex-wrap border-4 border-dark-color bg-light-color-lightened w-[300px] h-[480px] px-[16px] py-[24px] justify-center items-center mr-20'>
                         <svg className='basis-full' width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_129_2368)">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M123.75 168.75C135.685 168.75 147.131 164.009 155.57 155.57C164.009 147.131 168.75 135.685 168.75 123.75C168.75 111.815 164.009 100.369 155.57 91.9302C147.131 83.4911 135.685 78.75 123.75 78.75C111.815 78.75 100.369 83.4911 91.9302 91.9302C83.4911 100.369 78.75 111.815 78.75 123.75C78.75 135.685 83.4911 147.131 91.9302 155.57C100.369 164.009 111.815 168.75 123.75 168.75ZM180 123.75C180 138.668 174.074 152.976 163.525 163.525C152.976 174.074 138.668 180 123.75 180C108.832 180 94.5242 174.074 83.9752 163.525C73.4263 152.976 67.5 138.668 67.5 123.75C67.5 108.832 73.4263 94.5242 83.9752 83.9752C94.5242 73.4263 108.832 67.5 123.75 67.5C138.668 67.5 152.976 73.4263 163.525 83.9752C174.074 94.5242 180 108.832 180 123.75Z" fill="#63579E" />
@@ -49,7 +49,7 @@ function Paiement() {
                         <h2 className='text-3xl basis-1/2'>Payer en argent comptant</h2>
 
                     </div>
-                    <div className='flex flex-wrap border-4 border-dark-color w-[300px] h-[480px] px-[32px] py-[48px] justify-center items-center'>
+                    <div className='bg-light-color-lightened flex flex-wrap border-4 border-dark-color w-[300px] h-[480px] px-[32px] py-[48px] justify-center items-center'>
                         <svg className='basis-full' width="180" height="135" viewBox="0 0 180 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_129_2375)">
                                 <path d="M123.75 39.875C123.75 38.3832 124.343 36.9524 125.398 35.8975C126.452 34.8426 127.883 34.25 129.375 34.25H151.875C153.367 34.25 154.798 34.8426 155.852 35.8975C156.907 36.9524 157.5 38.3832 157.5 39.875V51.125C157.5 52.6168 156.907 54.0476 155.852 55.1025C154.798 56.1574 153.367 56.75 151.875 56.75H129.375C127.883 56.75 126.452 56.1574 125.398 55.1025C124.343 54.0476 123.75 52.6168 123.75 51.125V39.875Z" fill="#63579E" />
@@ -65,14 +65,41 @@ function Paiement() {
                     </div>
                 </div>
                 <div className='flex justify-center mt-20'>
-                    <div className='flex border-4 border-dark-color w-[300px] h-[96px] px-[24px] py-[16px] items-center text-center'>
+                    <div className='flex border-4 bg-light-color-lightened border-dark-color w-[300px] h-[96px] px-[24px] py-[16px] items-center text-center'>
                         <h2 className='text-3xl'>Utiliser une carte cadeau</h2>
                     </div>
                 </div>
+                <div className='mt-24 w-full flex justify-center'>
+                <NavItem name="Retourner à l'accueil" link="/" iconRight={false} className="w-1/3" onClick={clearStorage}/>
+                </div>
             </div>
-            <div className='mt-24 w-full flex justify-center'>
-            <NavItem name="Retourner à l'accueil" link="/" iconRight={false} className="w-1/3" onClick={clearStorage}/>
+            <div className=''>
+            <div className='flex justify-center items-center mt-20'>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" transform="rotate(-180 20 20)" fill="#121517" />
+                    </svg>
+                    <div className='p-[2px] w-[30%] bg-dark-color'></div>
+                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="36" cy="36" r="20" transform="rotate(-180 36 36)" fill="#63579E" />
+                        <circle cx="36" cy="36" r="34" transform="rotate(-180 36 36)" stroke="#121517" stroke-width="4" />
+                    </svg>
+                </div>
+                <div className='flex mt-60 justify-center items-center'>
+                    <div className='flex bg-dark-color text-white w-[680px] p-3 justify-center items-center gap-6 self-stretch'>
+                        <p>RESTE À PAYER :</p>
+                        <p className='text-2xl'>{cartStore.getTotalPrice()} $</p>
+                    </div>
+                </div>
+                <div className='text-center flex flex-wrap justify-center items-center mt-[80px]'>
+                <div className='bg-light-color-lightened flex flex-wrap border-4 border-dark-color w-[300px] h-[480px] px-[32px] py-[48px] justify-center items-center mr-20'>
+                        <h2 className='text-3xl basis-full'>Carte crédit</h2>
+                    </div>
+                    <div className='bg-light-color-lightened flex flex-wrap border-4 border-dark-color w-[300px] h-[480px] px-[32px] py-[48px] justify-center items-center'>
+                        <h2 className='text-3xl basis-full'>Carte débit</h2>
+                    </div>
+                </div>
             </div>
+
 
         </main>
     )

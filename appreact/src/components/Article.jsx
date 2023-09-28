@@ -21,7 +21,7 @@ function Article({ article, popup = false, bar = true }) {
     };
 
     return (
-        <article className="flex flex-col justify-between w-2/5 m-4 p-2 items-center ">
+        <article className="flex flex-col justify-between w-2/5 m-4 p-2 items-center">
 
             {bar === true ? <Bar width="w-full" height="h-2" className="w-full m-2" /> : ''}
             <div className="w-full flex justify-between h-8/12">
