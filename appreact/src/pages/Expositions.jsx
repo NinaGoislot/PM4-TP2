@@ -42,7 +42,7 @@ function Expositions() {
                         <Article key={article.id} article={article}/>
                     ))}
                 </div>
-                {cartStore.cart.length > 0 ? <Panier /> : ''}
+                <Panier />
             </main>
 
             {/* Affichage de la pop up Article */}

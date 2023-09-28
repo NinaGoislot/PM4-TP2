@@ -37,7 +37,7 @@ function Article({ article, popup = false, bar = true }) {
                                 </figure>}
                         <div className="absolute bottom-2 right-2 w-12 h-12 light-border flex justify-center items-center cursor-pointer" onClick={() => openModal(article)}>
                             <img src="../../index_picto.svg" alt="Cliquez ici" className="w-2/3 h-2/3 hand-tap" />
-                            <div className="w-3 h-3 bg-white rounded-full custom-ping absolute left-[25%] top-[12%]"></div>
+                            <div className="w-3 h-3 bg-white rounded-full custom-ping absolute left-[26%] top-[12%]"></div>
                         </div>
 
                     </div>
