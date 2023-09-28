@@ -121,6 +121,9 @@ class CartStore {
     // Vide le localStorage
     clearLocalStorage() {
         localStorage.removeItem("Panier");
+        for (const item of this.cart) {
+            if (item.quantity != 0) {item.quantity = 0}
+        }
         this._cart = [];
         this.saveCart();
     }
