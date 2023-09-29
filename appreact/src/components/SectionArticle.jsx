@@ -26,7 +26,7 @@ function SectionArticle({ articles, sectionName, sectionIcon, alignLeft = true }
                                 className={`text-light-color p-3 text-xl`}
                             />
                         )}
-                        <p className="text-light-color text-xl">{sectionName}</p>
+                        <p className="text-light-color sm:text-lg lg:text-xl">{sectionName}</p>
                     </div> :
                     <div className=" lg:w-10/12 sm:w-full h-full bg-dark-color flex justify-end items-center px-5">
                         <p className="text-light-color text-xl">{sectionName}</p>

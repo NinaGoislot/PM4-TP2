@@ -9,11 +9,11 @@ Obligatoire pour le composant :
 **/
 
 
-function ColorButton({ link, label, title, onClick, width, height, GreenBg = false, RedBg = false}) {
+function ColorButton({ link, label, title, onClick, width, height, GreenBg = false, RedBg = false, className}) {
 
     const buttonTitle = title || label;
-    const w = width || "w-1/3";
-    const h = height || "h-16";
+    const w = width || "lg:w-1/3 sm:w-4/5";
+    const h = height || "lg:h-16 sm:h-16";
     const bgColor = GreenBg === true ? 'bg-valid-color' : RedBg === true ? 'bg-error-color' : '';
 
     if (!label && !title) {
@@ -23,7 +23,7 @@ function ColorButton({ link, label, title, onClick, width, height, GreenBg = fal
     return (
 
         <button
-            className={`${h} ${w} ${bgColor} text-xl`}
+            className={`${h} ${w} ${bgColor} ${className} lg:text-xl sm:text-lg shadow-button-shadow`}
             title={buttonTitle}
             onClick={onClick}>
 

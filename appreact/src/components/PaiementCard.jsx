@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard } from '@fortawesome/free-regular-svg-icons';
 import { faMoneyBill1 } from '@fortawesome/free-regular-svg-icons';
 
-function PaiementCard({icon, link, text, height = "h-full", width = "w-1/2", className}) {
+function PaiementCard({icon, link, text, height = "h-full", width = "lg:w-1/2 sm:w-full", className}) {
 
     /** Nous posssédons un compte gratuit de fontAwesome. 
      * Nous sommes donc limités dans l'utilisation d'icones sous la forme regular.
@@ -15,9 +15,9 @@ function PaiementCard({icon, link, text, height = "h-full", width = "w-1/2", cla
     
 
     return (
-        <Link className={`flex flex-col ${!icon ? 'justify-center' : 'justify-between'} ${height} ${width} py-12 px-12 bg-light-color-lightened border-custom shadow-card-shadow ${className}`} to={link}>
-            {icon &&  <FontAwesomeIcon icon={choosenIcon} className="w-full paiement-icon text-primary-color"/>}
-            <h2 className="text-5xl italic text-center">{text}</h2>
+        <Link className={`flex lg:flex-col sm:items-center sm:gap-x-4 ${!icon ? 'justify-center' : 'justify-between'} ${height} ${width} lg:py-12 lg:px-12 sm:p-6 bg-light-color-lightened border-custom shadow-card-shadow ${className}`} to={link}>
+            {icon &&  <FontAwesomeIcon icon={choosenIcon} className="lg:w-full lg:paiement-icon text-primary-color sm:text-6xl"/>}
+            <h2 className="lg:text-5xl sm:text-3xl italic text-center">{text}</h2>
         </Link>
   
     )

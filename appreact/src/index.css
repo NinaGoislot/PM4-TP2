@@ -10,7 +10,7 @@
   html,
   body,
   .App {
-    min-height: 100vh;
+    @apply bg-light-color-lightened min-h-screen
   }
 
   .App {
@@ -57,7 +57,7 @@
   }
 
   .cart-classes li:not(:first-child) {
-    @apply border-t-2 border-primary-color
+    @apply border-t-2 border-primary-color sm:pt-4
   }
 
   .value-container {
@@ -92,11 +92,11 @@
   }
 
   .disabled {
-    @apply bg-neutral-300 text-neutral-500
+    @apply bg-neutral-300 text-neutral-500;
   }
 
   .paiement-section {
-    @apply bg-light-color flex flex-col py-32 px-10 h-screen
+    @apply bg-light-color flex flex-col lg:py-32 lg:px-10 lg:h-screen sm:p-6;
   }
 
   .paiement-icon {
@@ -104,6 +104,20 @@
     /* 180px */
     line-height: 1;
   }
+
+  .no-scroll {
+    @apply overflow-hidden;
+  }
+
+  .popup-background {
+    @apply bg-black bg-opacity-50 ;
+  }
+  
+  .limited-actions-bg {
+    @apply no-scroll fixed inset-0 z-50 popup-background
+  }
+  
+  /*Classes pour animations*/
 
   .custom-ping {
     animation: ping 1.25s ease-out backwards;

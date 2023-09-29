@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Button from "./Button";
 import { GlobalContext } from '../App.jsx';
 import { observer } from "mobx-react-lite";
 
-function QuantityButton({ row = true, className, article, small, popUp = false}) {
+function QuantityButton({ row = true, className, article, small, popUp = false }) {
 
     const { cartStore } = useContext(GlobalContext);
     const direction = row ? "row" : "col";
@@ -13,7 +13,7 @@ function QuantityButton({ row = true, className, article, small, popUp = false})
     const test = article.quantity;
     const [previousQuantity, setPreviousQuantity] = useState(cartStore.getQuantityForArticle(article));
     const [isFirstRender, setIsFirstRender] = useState(true);
-    
+
 
     const handleAddToCart = () => {
         cartStore.addCart(article);
@@ -25,7 +25,7 @@ function QuantityButton({ row = true, className, article, small, popUp = false})
 
     useEffect(() => {
         const currentQuantity = cartStore.getQuantityForArticle(article);
-        
+
         if (!isFirstRender) {
             if (currentQuantity > previousQuantity) {
                 if (row) {
@@ -45,7 +45,7 @@ function QuantityButton({ row = true, className, article, small, popUp = false})
         } else {
             setIsFirstRender(false);
         }
-    
+
         setPreviousQuantity(currentQuantity);
     }, [cartStore.getQuantityForArticle(article)]);
 
@@ -53,15 +53,15 @@ function QuantityButton({ row = true, className, article, small, popUp = false})
     return (
 
         <div className={`flex flex-${direction} justify-between items-center ${className && className}`}>
-            {row === false 
-                ? <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} small={small && small === true ? true : false} /> 
+            {row === false
+                ? <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} small={small && small === true ? true : false} />
                 : <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} small={small && small === true ? true : false} disabled={disabled} />}
-<p key={animationKey} className={`p-3 ${popUp === true ? `text-4xl` : `text-2xl`} ${animationClass}`}>
-    {cartStore.getQuantityForArticle(article)}
-</p>
-            {row === false 
-                ? <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} small={small && small === true ? true : false} disabled={disabled} /> 
-                : <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} small={small && small === true ? true : false}/>}
+            <p key={animationKey} className={`p-3 ${popUp === true ? `lg:text-4xl sm:text-3xl` : `text-2xl`} ${animationClass}`}>
+                {cartStore.getQuantityForArticle(article)}
+            </p>
+            {row === false
+                ? <Button title="Retirer" icon="faMinus" onClick={handleRemoveFromCart} small={small && small === true ? true : false} disabled={disabled} />
+                : <Button title="Ajouter" icon="faPlus" onClick={handleAddToCart} small={small && small === true ? true : false} />}
         </div>
 
     )

@@ -12,8 +12,8 @@ function NavPaiement() {
    };
 
     return (
-        <nav className='w-full flex items-center px-10'>
-            <ul className='h-16 w-40'>
+        <nav className='w-full flex items-center lg:px-10'>
+            <ul className='h-16 lg:w-40 sm:w-32'>
                <NavItem name="Retour" onClick={handleRetour} iconRight={false} />
             </ul>
         </nav>
