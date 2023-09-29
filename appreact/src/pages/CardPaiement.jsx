@@ -3,13 +3,17 @@ import { GlobalContext } from '../App.jsx';
 import NavPaiement from '../components/NavPaiement.jsx';
 import PaiementCard from '../components/PaiementCard.jsx';
 import InstructionBanner from '../components/InstructionBanner.jsx';
+import ArianeThread from '../components/ArianeThread.jsx';
 
 function CardPaiement() {
+
+    
 
     const { cartStore } = useContext(GlobalContext);
 
     return (
         <main className='paiement-section justify-between'>
+           <ArianeThread step={1} />
             <NavPaiement />
             <div className='flex justify-center w-full h-full'>
                 <div className='h-full w-3/5 mt-60'>
