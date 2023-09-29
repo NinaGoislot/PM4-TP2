@@ -1,4 +1,3 @@
-import Nav from '../components/Nav';
 import { observer } from 'mobx-react-lite';
 
 function Screensaver() {

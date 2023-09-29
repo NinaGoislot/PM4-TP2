@@ -9,7 +9,6 @@ import ArticleModal from '../components/ArticleModal';
 function Expositions() {
 
     const { articleStore } = useContext(GlobalContext);
-    const { cartStore } = useContext(GlobalContext);
 
     // On acccède aux données des articles via ArticleStore
     const articles = articleStore.articles;

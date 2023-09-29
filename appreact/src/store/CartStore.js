@@ -118,11 +118,16 @@ class CartStore {
         return cartContents;
     }
 
+    //Appliquer une réduction fixe
+    applyDiscount(number) {
+        return this.getCartTotalWithTaxes - number;
+    }
+
     // Vide le localStorage
     clearLocalStorage() {
         localStorage.removeItem("Panier");
         for (const item of this.cart) {
-            if (item.quantity != 0) {item.quantity = 0}
+            if (item.quantity !== 0) {item.quantity = 0}
         }
         this._cart = [];
         this.saveCart();

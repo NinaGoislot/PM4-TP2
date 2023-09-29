@@ -7,18 +7,18 @@ import ArianeThread from '../components/ArianeThread.jsx';
 
 function CardPaiement() {
 
-    
+
 
     const { cartStore } = useContext(GlobalContext);
 
     return (
         <main className='paiement-section lg:justify-between'>
-           <ArianeThread step={1} />
             <NavPaiement />
-            <div className='flex justify-center w-full h-full sm:mt-12'>
-                <div className='lg:h-full lg:w-3/5 lg:mt-60 sm:w-full'>
+            <ArianeThread step={1} />
+            <div className='flex justify-center w-full h-full'>
+                <div className='lg:w-3/5 lg:mt-40 sm:w-full sm:flex sm:flex-col sm:gap-y-6'>
                     <InstructionBanner text="Reste à payer :" amount={cartStore.getCartTotalWithTaxes()} />
-                    <div className='flex sm:flex-col justify-between lg:h-2/5 lg:w-full my-20 sm:gap-y-4'>
+                    <div className='flex sm:flex-col justify-between lg:h-2/5 lg:w-full lg:my-20 sm:gap-y-6'>
                         <PaiementCard text="Carte crédit" className="lg:mr-6" />
                         <PaiementCard text="Carte débit" />
                     </div>

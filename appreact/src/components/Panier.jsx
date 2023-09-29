@@ -114,8 +114,8 @@ function Panier() {
               <div className="bg-light-color p-4 rounded shadow h-48 lg:w-1/2 sm:w-5/6 flex flex-col justify-evenly">
                 <p className='text-center lg:text-xl sm:text-lg'>Souhaitez vous vraiment abandonner votre commande ?</p>
                 <div className="flex justify-evenly mt-4 h-2/5">
-                  <ColorButton onClick={handleModalCancel} label="Annuler" height="h-full" RedBg={true} className='text-light-color' width='sm:w-2/5' />
-                  <ColorButton onClick={handleModalConfirm} label="Confirmer" height="h-full" GreenBg={true} className='text-light-color' width='sm:w-2/5' />
+                  <ColorButton onClick={handleModalCancel} label="Annuler" height="h-full" RedBg={true} className='text-light-color' width='sm:w-2/5 lg:w-1/3' />
+                  <ColorButton onClick={handleModalConfirm} label="Confirmer" height="h-full" GreenBg={true} className='text-light-color' width='sm:w-2/5 lg:w-1/3' />
                 </div>
               </div>
             </div>

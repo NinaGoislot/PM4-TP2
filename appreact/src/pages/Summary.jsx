@@ -43,7 +43,7 @@ function Summary() {
                                     <div className='lg:border-l-2 lg:border-b-2 lg:w-3/5 sm:w-full lg:border-primary-color flex sm:justify-center items-center'>
                                         <p className='text-standard-size sm:text-center px-2 border-primary-color'>{article.name}</p>
                                     </div>
-                                    <div className="flex justify-center items-center sm:hidden lg:block">
+                                    <div className="justify-center items-center sm:hidden lg:flex ">
                                         <QuantityButton article={article} small={true} />
                                         <Bar row={false} height="h-5" className='px-2' />
                                     </div>

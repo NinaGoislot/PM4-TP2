@@ -8,7 +8,6 @@ import SectionArticle from '../components/SectionArticle';
 function Extras() {
 
     const { articleStore } = useContext(GlobalContext);
-    const { cartStore } = useContext(GlobalContext);
 
 
     // On acccède aux données des articles via ArticleStore

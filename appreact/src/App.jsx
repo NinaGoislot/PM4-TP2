@@ -12,6 +12,7 @@ import Summary from './pages/Summary';
 import ProcessInformation from './pages/ProcessInformation';
 import PaiementStatus from './pages/PaiementStatus';
 import CardPaiement from './pages/CardPaiement';
+import GiftCard from './pages/GiftCard';
 
 export const GlobalContext = createContext();
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/ProcessInformation" element={<ProcessInformation />} />
             <Route path="/PaiementStatus" element={<PaiementStatus />} />
             <Route path="/CardPaiement" element={<CardPaiement />} />
+            <Route path="/GiftCard" element={<GiftCard />} />
           </Routes>
         </BrowserRouter>
       </GlobalContext.Provider>
