@@ -4,7 +4,7 @@ function ArianeThread({ step }) {
     return (
         <div className="flex items-center justify-center py-10 space-x-2">
             {step >= 2 && (
-            <svg className={`transition-opacity duration-200 mr-[-7%] `} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={`transition-opacity duration-200 mr-[-83px]`} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="20" transform="rotate(-180 20 20)" fill="#121517"/>
             </svg>
             )}
