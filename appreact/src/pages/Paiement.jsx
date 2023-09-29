@@ -22,9 +22,6 @@ function Paiement() {
                         <PaiementCard text="Utiliser une carte cadeau" width='w-3/5' />
                     </div>
                 </div>
-                <div className='mt-24 w-full flex justify-center'>
-                <NavItem name="Retourner à l'accueil" link="/" iconRight={false} className="w-1/3" onClick={clearStorage}/>
-                </div>
             </div>
         </main>
     )
