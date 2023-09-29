@@ -3,7 +3,7 @@ import { GlobalContext } from '../App.jsx';
 import { observer } from "mobx-react-lite";
 import Bar from "./Bar";
 import QuantityButton from './QuantityButton';
-import NavigationButton from './NavigationButton';
+import ColorButton from './ColorButton.jsx';
 import { useNavigate } from 'react-router-dom';
 
 function Panier() {
@@ -59,8 +59,8 @@ function Panier() {
           </ul>
         </div>
         <ul className='flex justify-between mt-10'>
-          <NavigationButton label="Abandonner ma commande" link="/expositions" onClick={handleDeleteClick} RedBg={true} />
-          <NavigationButton label="Confirmer ma commande" link="/summary" GreenBg={true} />
+          <ColorButton label="Abandonner ma commande" link="/expositions" onClick={handleDeleteClick} RedBg={true} />
+          <ColorButton label="Confirmer ma commande" link="/summary" GreenBg={true} />
         </ul>
       </div>
 
@@ -70,9 +70,8 @@ function Panier() {
           <div className="bg-light-color p-4 rounded shadow h-48 w-1/2 flex flex-col justify-evenly">
             <p className='text-center text-xl'>Souhaitez vous vraiment abandonner votre commande ?</p>
             <div className="flex justify-evenly mt-4 h-2/5">
-              <NavigationButton onClick={handleModalCancel} label="Annuler" height="h-full" RedBg={true} />
-              <NavigationButton onClick={handleModalConfirm} label="Confirmer" height="h-full" GreenBg={true}/>
-            
+              <ColorButton onClick={handleModalCancel} label="Annuler" height="h-full" RedBg={true} />
+              <ColorButton onClick={handleModalConfirm} label="Confirmer" height="h-full" GreenBg={true}/>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/{*.jsx, *.js}"],
   theme: {
@@ -22,6 +24,7 @@ module.exports = {
         'inner-shadow': 'inset 0 0 12px rgba(171, 167, 157, 1)', // Ombre interne
         'outer-shadow': '0 0 8px rgba(171, 167, 157, 1)',      // Ombre externe
         'button-shadow': '2px 3px 10px rgba(171, 167, 157, 1)',      // Ombre externe décalée
+        'card-shadow': '2px 3px 10px rgba(171, 167, 157, 1)', 
       },
       colors: {
         'dark-color': '#121517',
@@ -32,6 +35,10 @@ module.exports = {
         'dark-color' : '#121517', //Couleur foncée du projet
         'primary-color' : '#63579E', //Couleur vivante du projet
 
+      },
+      screens: {
+          'sm': {'max': '639px'},
+        // => @media (max-width: 639px) { ... }
       },
     },
   },

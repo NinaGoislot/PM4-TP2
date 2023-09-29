@@ -21,9 +21,9 @@ function Article({ article, popup = false, bar = true }) {
     };
 
     return (
-        <article className="flex flex-col justify-between w-2/5 m-4 p-2 items-center ">
+        <article className="flex flex-col flex-wrap justify-between sm:w-full lg:w-2/5 sm:my-2 lg-m-4 lg:p-2 items-center ">
 
-            {bar === true ? <Bar width="w-full" height="h-2" className="w-full m-2" /> : ''}
+            {bar === true ? <Bar width="w-full" height="h-2" className="w-full sm:my-2 lg:m-2" /> : ''}
             <div className="w-full flex justify-between h-8/12">
                 <div className="flex flex-col w-10/12 h-full">
                     <div className="w-full overflow-hidden relative h-auto">
@@ -51,7 +51,7 @@ function Article({ article, popup = false, bar = true }) {
                     <QuantityButton className={"h-full shadow-outer-shadow bg-light-color-lightened rounded p-2"} row={false} article={article} />
                 </div>
             </div>
-            {bar === true ? <Bar width="w-full" height="h-2" className="w-full m-2" /> : ''}
+            {bar === true ? <Bar width="w-full" height="h-2" className="w-full sm:my-2 lg:m-2" /> : ''}
 
             {showModal && selectedArticle && (
                 <ArticleModal article={selectedArticle} onClose={closeModal} />

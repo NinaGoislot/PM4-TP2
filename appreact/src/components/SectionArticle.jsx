@@ -17,9 +17,9 @@ function SectionArticle({ articles, sectionName, sectionIcon, alignLeft = true }
 
     return (
         <section>
-            <div className="w-full h-12 flex justify-center items-center">
+            <div className="w-full h-12 flex flex-wrap justify-center items-center">
                 {alignLeft === true ?
-                    <div className=" w-10/12 h-full bg-dark-color flex items-center px-5">
+                    <div className=" lg:w-10/12 sm:w-full h-full bg-dark-color flex items-center px-5">
                         {sectionIcon && (
                             <FontAwesomeIcon
                                 icon={icon}
@@ -28,7 +28,7 @@ function SectionArticle({ articles, sectionName, sectionIcon, alignLeft = true }
                         )}
                         <p className="text-light-color text-xl">{sectionName}</p>
                     </div> :
-                    <div className=" w-10/12 h-full bg-dark-color flex justify-end items-center px-5">
+                    <div className=" lg:w-10/12 sm:w-full h-full bg-dark-color flex justify-end items-center px-5">
                         <p className="text-light-color text-xl">{sectionName}</p>
                         {sectionIcon && (
                             <FontAwesomeIcon
@@ -39,13 +39,13 @@ function SectionArticle({ articles, sectionName, sectionIcon, alignLeft = true }
                     </div>
                 }
             </div>
-            <Bar width="w-4/5" height="h-1" className="w-full mt-5" />
+            <Bar width="lg:w-4/5 sm:w-full" height="h-1" className="w-full mt-5" />
             <div className='flex flex-wrap justify-center'>
                 {articles.map(article => (
                     <Article key={article.id} article={article} bar={false} />
                 ))}
             </div>
-            <Bar width="w-4/5" height="h-1" className="w-full" />
+            <Bar width="lg:w-4/5 sm:w-full" height="h-1" className="w-full" />
             
         </section>
     )

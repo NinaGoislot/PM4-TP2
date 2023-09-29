@@ -9,7 +9,7 @@ Obligatoire pour le composant :
 **/
 
 
-function NavigationButton({ link, label, title, onClick, width, height, GreenBg = false, RedBg = false}) {
+function ColorButton({ link, label, title, onClick, width, height, GreenBg = false, RedBg = false}) {
 
     const buttonTitle = title || label;
     const w = width || "w-1/3";
@@ -34,4 +34,4 @@ function NavigationButton({ link, label, title, onClick, width, height, GreenBg 
     )
 }
 
-export default NavigationButton;
+export default ColorButton;

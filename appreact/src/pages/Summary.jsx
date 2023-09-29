@@ -1,22 +1,17 @@
 import { GlobalContext } from '../App.jsx';
 import { observer } from "mobx-react-lite";
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import QuantityButton from '../components/QuantityButton';
 import Bar from "../components/Bar";
-import NavItem from '../components/Navitem';
-import NavigationButton from '../components/NavigationButton.jsx';
+import ColorButton from '../components/ColorButton.jsx';
+import NavPaiement from '../components/NavPaiement.jsx';
 
 function Summary({ }) {
     const { cartStore } = useContext(GlobalContext);
 
-
-
-
     return (
-        <main className='bg-light-color flex flex-col justify-between py-32 px-10'>
-            <ul className='flex'>
-                <NavItem name="Retour" link="/Extras" iconRight={false} className='w-40' />
-            </ul>
+        <main className='paiement-section justify-between'>
+            <NavPaiement/>
             <div className='flex justify-center w-ful'>
                 <div className='w-10/12'>
                     <h1 className='text-5xl'>Panier</h1>
@@ -70,12 +65,12 @@ function Summary({ }) {
                         <p className='text-2xl'>{cartStore.getCartTotalWithTaxes()} $</p>
                     </div>
                     <div className="flex justify-end w-full mt-6">
-                        <NavigationButton label="Payer" link="/Paiement" GreenBg={true} width='w-36' />
+                        <ColorButton label="Payer" link="/Paiement" GreenBg={true} width='w-36' />
                     </div>
                 </div>
             </div>
             <div className="flex justify-center w-full mt-6">
-                <NavigationButton label="Abandonner ma commande" link="/Paiement" RedBg={true} />
+                <ColorButton label="Abandonner ma commande" link="/Paiement" RedBg={true} />
             </div>
         </main>
     )

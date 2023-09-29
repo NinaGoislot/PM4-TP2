@@ -2,17 +2,20 @@ import React from 'react';
 import NavItem from './Navitem';
 
 
-function Nav({page}) {
+function Nav({ page }) {
 
     return (
-        <nav className='w-full flex justify-between items-center px-10'>
-            <img className={`w-52 ${page}`} src="../../Noir_Logo_Musee_Lexplorateur.svg" alt="Logo du musée l'explorateur" />
-            <ul className='h-16 w-48 space-y-4'>
+        <nav className='w-full flex lg:justify-between sm:justify-end items-center lg:px-10 sm:mt-10 sm:mb-6 sm:px-6'>
+            <div className='w-52 sm:hidden lg:block'>
+                <img className={`w-full`} src="../../Noir_Logo_Musee_Lexplorateur.svg" alt="Logo du musée l'explorateur" />
+            </div>
+
+            <ul className='h-16 w-48'>
                 {page === 'expositions' ?
                     <NavItem name="Extras" link="/extras" />
-                : page === 'extras' ?
-                    <NavItem name="Expositions" link="/expositions" />
-                : ''}
+                    : page === 'extras' ?
+                        <NavItem name="Expositions" link="/expositions" />
+                        : ''}
             </ul>
         </nav>
     );
