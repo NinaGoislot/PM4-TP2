@@ -148,6 +148,25 @@
   .slide-right-animation {
     animation: slideRight 0.3s forwards;
   }
+
+  .moveRight {
+    transform: translateX(565%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.2s;
+  }
+}
+
+.animate-bounceFleche {
+  animation: bounceFleche 3s infinite;
 }
 
 @layer utilities {
@@ -182,23 +201,12 @@
   }
 }
 
-@keyframes tap {
-  0% {
-    transform: rotateX(0deg);
+@keyframes bounceFleche {
+  0%, 100% {
+      transform: translateY(0);
   }
-
-  10% {
-    transform: rotateX(12.5deg);
-    transform: rotateZ(-12.5deg);
-  }
-
-  25% {
-    transform: rotateX(25deg);
-    transform: rotateZ(-20deg);
-  }
-
-  75% {
-    transform: rotateZ(0deg);
+  50% {
+      transform: translateY(10px);
   }
 }
 
@@ -220,7 +228,6 @@
   75% {
     transform: rotateZ(0deg);
   }
-
 }
 
 
