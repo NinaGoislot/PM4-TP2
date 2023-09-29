@@ -13,8 +13,8 @@ function CardPaiement() {
 
     return (
         <main className='paiement-section lg:justify-between'>
-           <ArianeThread step={1} />
             <NavPaiement />
+            <ArianeThread step={1} />
             <div className='flex justify-center w-full h-full sm:mt-12'>
                 <div className='lg:h-full lg:w-3/5 lg:mt-60 sm:w-full'>
                     <InstructionBanner text="Reste à payer :" amount={cartStore.getCartTotalWithTaxes()} />

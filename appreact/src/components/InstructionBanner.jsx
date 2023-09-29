@@ -11,8 +11,8 @@ function InstructionBanner({text, icon, amount}) {
 
         <div className="flex w-full bg-dark-color text-light-color">
             <div className="flex items-center w-1/2` px-6 py-4">
-                <p className={`lg:text-2xl sm:text-xl max-w-4/5 ${!icon && !amount ? 'w-full text-center' : 'mr-6'}`}>{text}</p>
-                {amount && <p className="lg:text-5xl sm:text-xl">{amount} $</p>}
+                <p className={`text-2xl max-w-4/5 ${!icon && !amount ? 'w-full text-center' : 'mr-6'}`}>{text}</p>
+                {amount && <p className="text-5xl">{amount} $</p>}
                 {icon &&  <FontAwesomeIcon icon={icon} className="w-1/5 pl-6" />}
             </div>
         </div>
