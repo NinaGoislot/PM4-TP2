@@ -27,7 +27,6 @@ function Carte({}) {
         </div>
         </div>
 
-
         )
 
 

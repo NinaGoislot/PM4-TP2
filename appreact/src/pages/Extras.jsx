@@ -42,7 +42,7 @@ function Extras() {
                     <SectionArticle articles={bookArticles} sectionName="Notre boutique" sectionIcon="faGift" />
                 </div>
 
-                {cartStore.cart.length > 0 ? <Panier /> : ''}
+                 <Panier />
 
             </main>
         </>

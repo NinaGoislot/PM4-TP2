@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect} from 'react';
 import { GlobalContext } from '../App.jsx';
 import { observer } from "mobx-react-lite";
 import Bar from "./Bar";
@@ -11,6 +11,21 @@ function Panier() {
   const { cartStore } = useContext(GlobalContext);
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
+  const [displayCart, setDisplayCart] = useState(cartStore.cart.length > 0);
+
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+
+  useEffect(() => {
+    if (cartStore.cart.length === 0 && !isAnimatingOut && displayCart) {
+      setIsAnimatingOut(true);
+      setTimeout(() => {
+        setIsAnimatingOut(false);
+        setDisplayCart(false);
+      }, 500);
+    } else if (cartStore.cart.length > 0 && !displayCart) {
+      setDisplayCart(true);
+    }
+  }, [cartStore.cart.length, displayCart, isAnimatingOut]);
 
   const handleDeleteClick = () => {
     setShowModal(true);
@@ -33,7 +48,9 @@ function Panier() {
   return (
     <>
 
-      <div className="w-11/12 p-6 border-custom fixed flex flex-col bg-light-color-lightened h-50 right-1/2 bottom-0 translate-x-2/4">
+{displayCart && (
+    <>
+      <div className={"w-11/12 p-6 border-custom fixed flex flex-col bg-light-color-lightened h-50 right-1/2 bottom-0" + (cartStore.cart.length > 0 ? " slide-in-panier" : " slide-out-panier")}>
         <div className="flex justify-center  basis-1/4 items-stretch justify-evenly">
           <div className='flex items-center'>
             <div className='h-3/5 border-r-2 border-dark-color text-2xl pr-4 flex items-center'>
@@ -44,11 +61,13 @@ function Panier() {
           <ul className='cart-classes bg-light-color-dark shadow-inner-shadow basis-2/3 flex flex-wrap p-4 my-5 max-h-52'>
             {cartStore.cart.map(article => (
               <li key={article.id} className='w-full py-1 flex items-center justify-between'>
-                <p className='text-standard-size'>{article.name}</p>
-                <div className='flex items-center justify-between w-2/5'>
-                  <QuantityButton article={article} small={true} />
+                <p className='text-standard-size flex-1'>{article.name}</p>
+                <div className='flex items-center justify-between w-5/12'>
+                  <div className='w-7/12'>
+                   <QuantityButton article={article} small={true} className="w-full"/>
+                  </div>
                   <Bar row={false} height="h-12" />
-                  <p className='text-2xl'>{article.price} $</p>
+                  <p className='text-2xl'>{article.price * article.quantity} $</p>
                 </div>
               </li>
             ))}
@@ -78,6 +97,9 @@ function Panier() {
       )}
     </>
   )
+}
+</>
+)
 }
 
 export default observer(Panier);
